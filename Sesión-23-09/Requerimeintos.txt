@@ -1,0 +1,18 @@
+Realizar un sofware que permita administrar el inventario de productos de la tienda de Pepito Perez, dónde desea saber codigo y nombre del producto, producto, marca, categoria, valor unitario, cantidad disponible, unidad de medida.
+
+
+
+
+
+
+
+
+*Gestionar categorias de los productos
+	{codigo, nombre}
+*Gestionar marcas
+	{codigo, nombre}
+*Gestionar productos
+	{codigo, nombre}
+*Administrar Inventario
+	{codigo, codigoProducto, codigoCategoria, codigoMarca,valorUnitario, cantidadDisponible, unidadMedida}
+	
