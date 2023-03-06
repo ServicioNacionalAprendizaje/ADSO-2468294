@@ -1,0 +1,69 @@
+SPA:
+
+Módulo de seguridad.
+
+Personas
+	id
+	primer_nombre
+	segundo_nombre
+	primer_apellido
+	segundio_apellido
+	edad
+	genero
+	correo
+	telefono
+	direccion
+	estado
+	
+Usuarios 
+	Ref: El usuario esta asociado a una única persona.
+	id
+	usuario
+	contrasenia
+	rol_id
+	estado
+
+Roles
+	Ref: Para definir roles, se estable el codigo, nombre y estado del rol {ejemplo: admin, estudiante, vendedor, ...}
+	
+	id
+	codigo
+	descripcion
+	estado
+	
+UsuariosRoles
+	Ref: Se asigna uno o varios roles a cada usuario.
+	
+	id
+	usuario_id
+	rol_id
+	estado
+	
+Vistas
+	Ref: Este formulario debe permitir registra las diferentes rutas del sistema para luego poder distribuir los permisos. Para el se requiere establecer lo siguiente: 
+	Nombre del modulo, nombre de la ruta, etiqueta, estado
+	
+	id
+	ruta
+	etiqueta	
+	modulo_id
+	estado
+	
+Modulos
+	Ref: Para definir módulos, se estable el codigo, nombre y estado del módulo {ejemplo: seguridad, ventas, notas, ...}
+
+	id
+	codigo
+	descripcion
+	estado
+	
+VistasRoles
+	Ref: Se asigna una o varias vistas a cada rol.
+	
+	id
+	rol_id
+	vista_id
+	estado
+	
+Nota general. 
+	Los campos de auditoria de base de datos, todas las entidades que apliquen, llevan, estado, fecha_creacion, fecha_modificacion, usuario_creacion, usuario_modificacion

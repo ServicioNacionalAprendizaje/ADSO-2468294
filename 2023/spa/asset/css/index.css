@@ -1,0 +1,35 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    background-color: darkgray;
+}
+
+.cont{
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+}
+
+.banner{
+    width: 100%;
+    background-image: url('../img/banner.PNG');
+    /* background-repeat: no-repeat; */
+    height: 5%;
+}
+
+.informativo{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    background-color: darkcyan;
+    width: 70%;
+    height: 800px;
+}
+
+.login{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    background-color: darkslategray;
+    width: 30%;
+    height: 800px;
+}
