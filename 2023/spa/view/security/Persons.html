@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro Personas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- library -->
+    <link rel="stylesheet" href="../../asset/library/node_modules/bootswatch/dist/spacelab/bootstrap.css">
+
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script src=''></script>
+</head>
+
+<body>
+    <form name="formData" id="formData">
+        <div id="container" class="container">
+            <div id="headData" class="">
+                <div class="alert alert-dismissible alert-success">
+                    <strong>Registro Personas</strong>
+                </div>
+            </div>
+            <div id="bodyData" class="">
+                <input type="hidden" name="id" id="id" value="">
+                <div class="form-group">
+                    <label for="" class="form-label mt-2">Tipo documento</label>
+                    <select class="form-select" id="typeDocument" name="typeDocument">
+                        <!-- data result database -->
+                        <option selected="" selected disabled hidden>--Seleccione--</option>
+                        <option value="CC">CC</option>
+                        <option value="TI">TI</option>
+                        <option value="DNI">DNI</option>
+                        <option value="PE">PE</option>
+                        <option value="CE">CE</option>
+                    </select>
+
+                    <label for="" class="form-label mt-2">Número de documento</label>
+                    <input type="number" class="form-control" name="document" id="document" aria-describedby=""
+                        placeholder="Número documento">
+
+                    <label for="" class="form-label mt-2">Primer nombre</label>
+                    <input type="text" class="form-control" name="firstName" id="firstName" aria-describedby=""
+                        placeholder="Primer nombre">
+                </div>
+            </div>
+            <div id="buttonData" class="">
+                <br>
+                <button type="button" id="btnAdd" name="btnAdd" class="btn btn-primary" onclick="Add()">Agregar</button>
+                <button type="button" id="btnUpdate" name="btnUpdate" class="btn btn-success" onclick="Update()">Modificar</button>
+                <button type="button" id="btnConsult" name="btnConsult" class="btn btn-warning" onclick="Consult()">Consultar</button>
+            </div>
+            <div id="resultData" class="">
+                <br>
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-primary">
+                            <th>Tipo Docuemnto</th>
+                            <th>Documento</th>
+                            <th>Primer Nombre</th>
+                            <th>Segundo Nombre</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- data result database -->
+                        <tr class="table-light">
+                            <td>CC</td>
+                            <td>4623785</td>
+                            <td>Pepito</td>
+                            <td>nn</td>
+                            <td><img src="../../asset/library/node_modules/bootstrap-icons/icons/pencil-square.svg" alt="" onclick="findById();"></td>
+                            <td><img src="../../asset/library/node_modules/bootstrap-icons/icons/person-x.svg" alt="" onclick="deleteById();"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="footerData" class="">
+
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
