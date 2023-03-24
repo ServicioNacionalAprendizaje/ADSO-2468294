@@ -12,17 +12,17 @@ import com.sena.ficha294sql.IService.IModulesService;
 
 @Service
 public class ModulesService implements IModulesService{
-	
+
 	@Autowired
 	private IModulesRepository repository;
-
+	
 	@Override
-	public List<Modules> all() {		
+	public List<Modules> all() {
 		return repository.findAll();
 	}
 
 	@Override
-	public Optional<Modules> findById(Integer id) {		
+	public Optional<Modules> findById(Integer id) {
 		return repository.findById(id);
 	}
 
@@ -34,5 +34,5 @@ public class ModulesService implements IModulesService{
 	@Override
 	public void delete(Integer id) {
 		repository.deleteById(id);		
-	}
+	}	
 }

@@ -21,6 +21,9 @@ $userModification;
 $dateCreation;
 $dateModification;
 
+$hola = "hola mundo 123";
+$hola = 5+2;
+
 if(isset($action))
 {
     $person = new Persons();

@@ -8,7 +8,6 @@ package EC;
  *
  * @author ariel
  */
-public interface Calcular1{
-    
-    public void Resultado1();
+public interface Proceso2{
+    public void GenerarResultado();
 }

@@ -9,7 +9,7 @@ package EC;
  * @author ariel
  */
 public class NewClass {
-    Proceso i1 = new Proceso() {};
-    
-    Proceso i2 = new Proceso() {};
+    public static void main(String[] args) {
+        Proceso proceso = new Proceso();
+    }
 }
