@@ -2,7 +2,7 @@
 require_once '../../model/security/Persons.php';
     
 $respuesta = array();
-
+$action=$_POST['action'];
 if(isset($action))
 {
     $person = new Persons();

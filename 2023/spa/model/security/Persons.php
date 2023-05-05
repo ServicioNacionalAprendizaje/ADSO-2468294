@@ -41,6 +41,8 @@ class Persons
     public function setFirstName ($firstName){$this->firstName =$firstName;} 
     public function getFirstName(){return $this->firstName;}
 
+
+    
     // Method to add
     public function Add(){
         $sentenciaSql="

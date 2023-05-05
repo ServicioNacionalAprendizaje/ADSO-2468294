@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro Personas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- library -->
+    <link rel="stylesheet" href="../../asset/library/node_modules/bootswatch/dist/spacelab/bootstrap.css">
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+
+    <!-- Agregar jquery -->
+    <script src="../../asset/library/node_modules/jquery/dist/jquery.js"></script>
+
+    <script src='../../js/security/Persona.js'></script>
+</head>
+
+<body>
+    <form name="formData" id="formData">
+        <div id="container" class="container">
+            <div id="headData" class="">
+                <div class="alert alert-dismissible alert-success">
+                    <strong>Registro Personas</strong>
+                </div>
+            </div>
+            <div id="bodyData" class="">
+                <input type="hidden" name="id" id="id" value="">
+                <div class="form-group">
+                    <label for="" class="form-label mt-2">Tipo documento</label>
+                    <select class="form-select" id="tipoDocumento" name="tipoDocumento">
+                        <!-- data result database -->
+                        <option selected="" selected disabled hidden value="">--Seleccione--</option>
+                        <option value="CC">CC</option>
+                        <option value="TI">TI</option>
+                        <option value="DNI">DNI</option>
+                        <option value="PE">PE</option>
+                        <option value="CE">CE</option>
+                    </select>
+
+                    <label for="" class="form-label mt-2">Número de documento</label>
+                    <input type="number" class="form-control" name="documento" id="documento" aria-describedby="" placeholder="Número documento">
+
+                    <label for="" class="form-label mt-2">Primer nombre</label>
+                    <input type="text" class="form-control" name="nombreCompleto" id="nombreCompleto" aria-describedby="" placeholder="Nombre completo">
+
+                    <label for="" class="form-label mt-2">Correo</label>
+                    <input type="text" class="form-control" name="correo" id="correo" aria-describedby="" placeholder="Correo">
+
+                    <label for="" class="form-label mt-2">Teléfono</label>
+                    <input type="text" class="form-control" name="telefono" id="telefono" aria-describedby="" placeholder="Teléfono">
+                    
+                    <label for="" class="form-label mt-2">Estado</label>
+                    <select class="form-select" id="estado" name="estado">
+                        <!-- data result database -->
+                        <option selected="" selected disabled hidden value="">--Seleccione--</option>
+                        <option value="1">Activo</option>
+                        <option value="0">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+            <div id="buttonData" class="">
+                <br>
+                <button type="button" id="btnAdd" name="btnAdd" class="btn btn-primary" onclick="Add()">Agregar</button>
+                <button type="button" id="btnUpdate" name="btnUpdate" class="btn btn-success" onclick="Update()">Modificar</button>
+                <button type="button" id="btnConsult" name="btnConsult" class="btn btn-warning" onclick="Consult()">Consultar</button>
+            </div>
+            <div id="resultData" class="">
+                <br>
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-primary">
+                            <th>Tipo Docuemnto</th>
+                            <th>Documento</th>
+                            <th>Nombre </th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th>Estado</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataResult">
+                        <!-- data result database -->                       
+                    </tbody>
+                </table>
+            </div>
+            <div id="footerData" class="">
+
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
+<script>
+    loadTable();
+</script>

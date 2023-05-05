@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "bootstrap-icons": "^1.10.5",
+    "bootswatch": "^5.2.3",
+    "jquery": "^3.6.4"
+  }
+}
