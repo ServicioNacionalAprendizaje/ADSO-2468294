@@ -21,7 +21,7 @@ function Login() {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 Swal.fire('Saved!', '', 'success')
-                window.location.assign('/SENA/ADSO-2468294/Sesiones-2468294/2023/Sesion_02_03/view/dashboard.html');
+                window.location.assign('/SENA/ADSO-2468294/Sesiones-2468294/2023/spa/view/dashboard.html');
             } else if (result.isDenied) {
                 Swal.fire('Se canceló el ingreso', '', 'info')
                 Clear();
