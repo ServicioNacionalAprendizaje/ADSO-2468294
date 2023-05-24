@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.sena.backedservice.Dto.ILoginDto;
 import com.sena.backedservice.Dto.IPermissionDto;
 import com.sena.backedservice.Entity.User;
 import com.sena.backedservice.IRepository.IUserRepository;
@@ -40,5 +41,10 @@ public class UserService implements IUserService{
 	@Override
 	public List<IPermissionDto> getPermission(String user, String password) {
 		return repository.getPermission(user, password);
+	}
+
+	@Override
+	public Optional<ILoginDto> getLogin(String user, String password) {
+		return repository.getLogin(user, password);
 	}	
 }

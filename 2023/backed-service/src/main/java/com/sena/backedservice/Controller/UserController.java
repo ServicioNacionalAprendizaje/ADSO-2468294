@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sena.backedservice.Dto.ILoginDto;
 import com.sena.backedservice.Dto.IPermissionDto;
 import com.sena.backedservice.Entity.User;
 import com.sena.backedservice.Service.UserService;
@@ -59,9 +60,14 @@ public class UserController {
 		return user;
 	}
 	
-	@GetMapping("/login/{user}/{password}")
+	@GetMapping("/permission/{user}/{password}")
 	public List<IPermissionDto> getPermission(@PathVariable String user, String password) {
 		return service.getPermission(user, password);
+	}
+	
+	@GetMapping("/login/{user}/{password}")
+	public Optional<ILoginDto> getLogin(@PathVariable String user, String password) {
+		return service.getLogin(user, password);
 	}
 	
 	@DeleteMapping("{id}")
